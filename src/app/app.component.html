@@ -1,0 +1,13 @@
+<h1>
+ {{title}}
+</h1>
+<input type="text" [(ngModel)]="newhero"><button (click)="addHero()">Add Hero</button>
+<li *ngFor="let hero of heroes;let i = index">	
+	<span (click)='currentHero(i)'>{{hero.name}}</span>
+</li>
+<hr>
+<div *ngIf="h">
+	<h2>{{selectedHero.name}} Details</h2>
+	<div><label>id: </label>{{selectedHero.id}}</div>
+	<div><label>name: </label><input type="text" [(ngModel)]="selectedHero.name"></div>
+</div>
